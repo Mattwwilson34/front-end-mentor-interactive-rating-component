@@ -53,6 +53,8 @@ const addElements = () => {
   img.src = "./images/illustration-thank-you.svg";
   p.innerText = `You selected ${currSelection} out of 5`;
 
+  img.alt = "mobile phone with a receipt comming out of it";
+
   card.prepend(img, p);
 };
 
