@@ -64,6 +64,7 @@ button {
   display: flex;
   flex-direction: column;
   border-radius: 1rem;
+  max-width: 410px;
 
   .circle-star {
     @extend .circle;
@@ -83,6 +84,18 @@ button {
       color: $primary-color;
     }
   }
+
+  .thank-you-svg {
+    width: 150px;
+  }
+
+  .thank-you-selection {
+    padding: 5px 10px;
+    color: $primary-color;
+    background-color: hsl(210, 16%, 18%);
+    border-radius: 999px;
+    margin: 2rem 0 1rem 0;
+  }
 }
 
 .rating-container {
@@ -95,8 +108,18 @@ button {
     color: $light-grey;
 
     &:hover {
-      background-color: $light-grey;
+      background-color: $primary-color;
       color: white;
+      cursor: pointer;
     }
   }
+  .active-circle {
+    background-color: $light-grey;
+    color: white;
+  }
+}
+
+.center {
+  align-items: center;
+  text-align:center;
 }
