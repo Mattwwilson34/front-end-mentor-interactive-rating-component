@@ -1,0 +1,102 @@
+$primary-color: hsl(25, 97%, 53%);
+$primary-bg: hsla(225, 12%, 9%, 1);
+$white: hsl(0, 0%, 100%);
+$light-grey: hsl(217, 12%, 63%);
+$medium-grey: hsl(216, 12%, 54%);
+$dark-blue: hsl(213, 19%, 18%);
+$very-dark-blue: hsl(216, 12%, 8%);
+$p-font-size: 15px;
+$font-overpass: "Overpass";
+$gradient: linear-gradient($dark-blue, $very-dark-blue);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: $font-overpass;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: $primary-bg;
+}
+
+main {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+h1 {
+  color: $white;
+  margin: 1rem 0;
+  font-size: 24px;
+}
+
+p {
+  font-size: $p-font-size;
+  color: $light-grey;
+  line-height: 24px;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: hsl(211, 19%, 18%);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.card {
+  background-color: hsl(216, 21%, 15%);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+
+  .circle-star {
+    @extend .circle;
+    margin-bottom: 0.375rem;
+  }
+
+  button {
+    background-color: $primary-color;
+    font-size: 24px;
+    font-weight: 300;
+    color: $white;
+    border-radius: 999px;
+    padding: 10px;
+
+    &:hover {
+      background-color: $white;
+      color: $primary-color;
+    }
+  }
+}
+
+.rating-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0 1.5rem 0;
+
+  .rating-circle {
+    @extend .circle;
+    color: $light-grey;
+
+    &:hover {
+      background-color: $light-grey;
+      color: white;
+    }
+  }
+}
